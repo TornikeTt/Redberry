@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React , {useState} from "react"
+import './App.scss';
+import StartPage from "./components/StartPage//StartPage.js";
+import Identification from "./components/SecondPage/Identification.js"
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const [ page , setPage ] = useState(1)
+
+    const PageView = () => { 
+        if( page === 1) { 
+            return <StartPage page={page} setPage={setPage}/>
+        } else if( page === 2) { 
+            return <Identification />
+        }
+    }
+
+    return (
+        <div className="App">
+            { PageView() }
+        </div>
+    );
 }
 
 export default App;

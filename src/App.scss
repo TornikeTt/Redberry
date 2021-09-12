@@ -1,0 +1,15 @@
+@mixin flex( $direction, $justify, $align ) { 
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+* { 
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+@import "./components/StartPage/StartPage.scss";
+@import "./components/SecondPage/Identification.scss";
