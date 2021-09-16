@@ -1,0 +1,87 @@
+.identification_Main { 
+    width: $majorWidth; // This variable is from Page.scss
+    height: 100%;
+    @include flex(row , space-between, none);
+
+    .leftSide { 
+        form { 
+
+            .div_name, .div_lastName, .div_input { 
+                margin-top: 10px;
+                position: relative;
+                width: 330px;
+                height: 30px;
+
+                input { 
+                    width: 330px;
+                    height: 30px;
+                    border-width: 1px;
+                    border-color: white;
+                    padding-left: 10px;
+                    padding-right: 40px;
+                    outline: none;
+                }
+
+                img { 
+                    position: absolute;
+                    width: 20px;
+                    height: 20px;
+                    top: 50%;
+                    right: 0;
+                    transform: translate(-50%, -50%)
+                }
+            }
+
+            p { 
+                width: 300px;
+                font-size: 14px;
+                margin-top: 10px;
+                color: hsl(0, 100%, 74%);
+                font-weight: bold;
+            }
+
+            label { 
+                display: block;
+                margin-top: 20px;
+                font-weight: bold;
+            }
+
+            .ErrorMessige { 
+                color: hsl(0, 100%, 74%)
+            }
+        }
+
+        .note { 
+            margin-top: 50px;
+
+            hr { 
+                width: 250px;
+                height: 3px;
+                background-color: black;
+            }
+
+            p { 
+                margin-top: 10px;
+                color: grey;
+                width: 260px;
+            }
+        }
+    }
+
+    .rightSide { 
+        img { 
+            width: 550px;
+            height: 500px;
+        }
+    }
+}
+
+
+
+
+
+.inputError { 
+    border-style: solid;
+    border-color: hsl(0, 100%, 74%); 
+    border-width: 2px;
+}

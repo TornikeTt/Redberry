@@ -5,8 +5,8 @@
   @include flex(column , center, center );
 
   button { 
-    background-color: white;
     width: 150px;
+    background-color: #EAEAEA;
     border: none;
     color: black;
     font-size: 20px;
@@ -17,7 +17,6 @@
         font-weight: bold;
         text-shadow: 5px 5px 2px white;
     }
-
   }
 
 }

@@ -1,0 +1,72 @@
+.Recommendation { 
+    width: $majorWidth; // majorWidth variable is from Page.scss
+    height: 100%;
+    overflow: hidden;
+    @include flex( row , space-between, none);
+
+    .Recommendation_Questions { 
+        height: 90%;
+        overflow: auto;
+        margin-top: 20px;
+
+        &::-webkit-scrollbar {
+            width: 0;  
+            background: transparent;  // make scrollbar invisible 
+        }
+
+        p { 
+            font-size: 17px;
+        }
+
+        form { 
+            width: 390px;
+
+            fieldset { 
+                margin-top: 10px;
+                margin-left: 10px;
+                border: none;
+
+                input { 
+                    margin-top: 10px;
+                }
+
+                label { 
+                    margin-left: 10px;
+                }
+            }
+
+            textarea { 
+                width: 100%;
+                height: 120px;
+                resize: none;
+            }
+
+            h4 { 
+                margin-top: 20px;
+                margin-bottom: 10px;
+            }
+
+            .submit { 
+                margin-top: 20px;
+                display: block;
+                cursor: pointer;
+                float: right;
+                background-color: #208298;
+                width: 140px;
+                height: 46px;
+                border-radius: 42px;
+                border: none;
+                color: white;
+                font-weight: bold;
+            }
+        }
+    }
+
+    .Recommendation_Image { 
+        img { 
+            width: 500px;
+            height: 500px;
+        }
+    }
+
+}

@@ -2,7 +2,7 @@ import React , {useState} from "react";
 import { useSpring , animated } from "react-spring";
 
 const StartPage = (props) => { 
-    const { page , setPage } = props
+    const { start , setStart } = props
     const [ showText, setShowText ] = useState(false);
     
     const Main_Logo_style = useSpring( { 
@@ -61,7 +61,7 @@ const StartPage = (props) => {
                     && 
                 <animated.button
                     style={buttonStyle}
-                    onClick={() => setPage(page + 1)}
+                    onClick={() => setStart(false)}
                 >
                     კითხვარის დაწყება 
                 </animated.button> 

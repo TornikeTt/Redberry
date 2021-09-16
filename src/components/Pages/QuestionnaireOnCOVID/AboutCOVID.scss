@@ -1,0 +1,31 @@
+.aboutCovid { 
+    width: $majorWidth; // majorWidth variable is from Page.scss
+    height: 100%;
+    @include flex(row , space-between, none);
+
+    .aboutCovid_Questions {
+        margin-top: 20px;
+
+        fieldset { 
+            margin-top: 10px;
+            margin-left: 10px;
+            border: none;
+
+            input { 
+                margin-top: 10px;
+            }
+
+            label { 
+                margin-left: 10px;
+            }
+        }
+
+    }
+
+   .aboutCovid_Image { 
+        img { 
+            width: 550px;
+            height: 500px;
+        }
+    }
+}
