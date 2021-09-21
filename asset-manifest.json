@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/%7BRedberry%7D/static/css/main.2a51cf6e.chunk.css",
+    "main.js": "/%7BRedberry%7D/static/js/main.407aeace.chunk.js",
+    "main.js.map": "/%7BRedberry%7D/static/js/main.407aeace.chunk.js.map",
+    "runtime-main.js": "/%7BRedberry%7D/static/js/runtime-main.4561e77c.js",
+    "runtime-main.js.map": "/%7BRedberry%7D/static/js/runtime-main.4561e77c.js.map",
+    "static/js/2.e6eeab3f.chunk.js": "/%7BRedberry%7D/static/js/2.e6eeab3f.chunk.js",
+    "static/js/2.e6eeab3f.chunk.js.map": "/%7BRedberry%7D/static/js/2.e6eeab3f.chunk.js.map",
+    "index.html": "/%7BRedberry%7D/index.html",
+    "static/css/main.2a51cf6e.chunk.css.map": "/%7BRedberry%7D/static/css/main.2a51cf6e.chunk.css.map",
+    "static/js/2.e6eeab3f.chunk.js.LICENSE.txt": "/%7BRedberry%7D/static/js/2.e6eeab3f.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.4561e77c.js",
+    "static/js/2.e6eeab3f.chunk.js",
+    "static/css/main.2a51cf6e.chunk.css",
+    "static/js/main.407aeace.chunk.js"
+  ]
+}
