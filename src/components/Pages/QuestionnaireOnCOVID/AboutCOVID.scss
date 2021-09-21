@@ -6,19 +6,42 @@
     .aboutCovid_Questions {
         margin-top: 20px;
 
+        h4 { 
+            margin-top: 20px;
+        }
+
         fieldset { 
-            margin-top: 10px;
             margin-left: 10px;
+            margin-top: 10px;
+            height: auto;
             border: none;
 
             input { 
                 margin-top: 10px;
             }
 
+            .take { 
+                width: 330px;
+                height: 30px;
+                border-width: 1px;
+                border-color: white;
+                padding-left: 10px;
+                outline: none;
+            }
+
             label { 
                 margin-left: 10px;
             }
         }
+
+        p { 
+            width: 300px;
+            font-size: 14px;
+            margin-top: 10px;
+            color: hsl(0, 100%, 74%);
+            font-weight: bold;
+        }
+
 
     }
 

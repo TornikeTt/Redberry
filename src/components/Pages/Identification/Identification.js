@@ -1,93 +1,54 @@
 import React, { useState } from "react";
+import NameValidation from "./NameValidation";
+import LastNameValidation from "./LastNameValidation";
+import EmailValidation from "./EmailValidation";
 
-const Identification = (props) => { 
-    const [ NameError , setNameError ] = useState("")
+const Identification = (props) => {
+    // name validation --------------- START
+    const [ NameError , setNameError ] = useState("") // use for error message
     const [ NameStatus , setNameStatus] = useState("");
+    // name validation --------------- END
 
-    const Name_Identification_Hendler = (e) => { 
-        let nameValue = e.target.value
-        let nameValueLengt = nameValue.split("").length
+    // lastName validation --------------- START
+    const [ lastName_Error , setLastName_Error ] = useState("")  // use for error message
+    const [ lastName_Status , setLastName_Status] = useState("");
+    // lastName validation --------------- END
 
-        let nameTest = /(\d|[~`!@#£€$¢¥§%°^&*()\-_+={}[\]|\\/:;"'<>,.?])/gi
-        let nameAnswer = nameTest.test(nameValue);
+    // Email validation --------- START
+    const [ EmailError , setEmailError ] = useState("");
+    const [ EmailStatus , setEmailStatus ] = useState("");
+    // Email validation ------- END
 
-
-        
-        if( nameAnswer === true ) { 
-            setNameError("სახელის ველი უნდა შეიცავდეს მხოლოდ  ალფაბეტის სიმბოლოებს")
-            setNameStatus(false);
-        } else if( nameValueLengt <= 2) { 
-            setNameError("სახელის ველი უნდა შედგებოდეს მინიმუმ 3 სიმბოლოგან")
-            setNameStatus(false)
-            if( nameValueLengt === 0) { 
-                setNameError("სახელის ველის შევსება სავალდებულოა ")
-            }
-        } else if( nameValueLengt >= 3) { 
-            setNameError("")
-            setNameStatus(true)
-        } 
-
-        if( nameValueLengt > 225 ) { 
-            setNameError("სახელის ველი უნდა შედგებოდეს მაქსიმუმ 255 სიმბოლოსგან")
-            setNameStatus(false)
-        }
+    if(EmailStatus === true && lastName_Status === true && NameStatus === true) {
+        props.setNextPage(true);
+    } else {
+        props.setNextPage(false);
     }
 
-
-    const Error_Style_Hendler = () => { 
-        switch(NameStatus) { 
-            case "":
-                return ""
-            case false: 
-                return { 
-                    className: "inputError",
-                    img : <img src="./images/error.png" alt="error icone" />
-                }
-            case true: 
-                return <img src="./images/accept.png" alt="accept icone" />
-        }
-    }
-
-
-
-    return ( 
+    return (
         <main className="identification_Main">
             <div className="leftSide">
                 <form>
-                    <label for="name">სახელი*</label>
-                    <div className="div_name">
-                        <input 
-                            className={Error_Style_Hendler().className}
-                            type="text" 
-                            id="name" 
-                            placeholder="იოსებ" 
-                            onChange={Name_Identification_Hendler}
-                            autocomplete="off"
-                        />
-                        {Error_Style_Hendler().img}
-                    </div>
-                    <p> { NameError } </p>
+                    <NameValidation
+                        NameError = { NameError }
+                        setNameError = { setNameError }
+                        NameStatus = { NameStatus }
+                        setNameStatus = { setNameStatus }
+                    />
 
-                    <label for="lastName"> გვარი*</label>
-                    <div className="div_lastName">
-                        <input 
-                            type="text" 
-                            id="lastName" 
-                            placeholder="ჯუღაშვილი" 
-                        />
-                        <img src="./images/error.png" alt="error" />
-                    </div>
+                    <LastNameValidation
+                        lastName_Error = { lastName_Error }
+                        setLastName_Error = { setLastName_Error }
+                        lastName_Status = { lastName_Status }
+                        setLastName_Status = { setLastName_Status }
+                    />
 
-                    <label for="email"> ემაილი*</label>
-                    <div className="div_input">
-                        <input 
-                            type="email" 
-                            id="email" 
-                            placeholder="fb@redberry.ge"
-                        />
-                        <img src="./images/error.png" alt="error" />
-                    </div>
-
+                    <EmailValidation
+                        EmailError = { EmailError }
+                        setEmailError = { setEmailError }
+                        EmailStatus = { EmailStatus }
+                        setEmailStatus = { setEmailStatus }
+                    />
                 </form>
 
                 <div className="note">
@@ -97,9 +58,9 @@ const Identification = (props) => {
             </div>
 
             <div className="rightSide">
-                <img 
-                    src="images/SecondPage Image.png" 
-                    alt="two person image in second page" 
+                <img
+                    src="images/SecondPage Image.png"
+                    alt="two person image in second page"
                 />
             </div>
         </main>
